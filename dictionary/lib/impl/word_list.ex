@@ -2,7 +2,8 @@ defmodule Dictionary.Impl.WordList do
   @type t :: list(String.t())
 
   def word_list() do
-    "assets/words"
+    "../../assets/words"
+    |> Path.expand(__DIR__)
     |> File.read!
     |> String.split("\n", trim: true)
   end
