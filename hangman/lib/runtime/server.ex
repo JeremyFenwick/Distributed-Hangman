@@ -5,7 +5,7 @@ defmodule Hangman.Runtime.Server do
 
   # Client process
 
-  def start_link do
+  def start_link(_arg) do
     GenServer.start_link(__MODULE__, nil)
   end
 
